@@ -69,8 +69,9 @@ A powerful solution for managing complex and reusable terminal commands.
 ### 📦 Installation Steps
 
 **1. Clone the Repository**
-    - git clone [(https://github.com/Kashish-2005/AI-Assistant-Command-Generator-CLI)]
-    - cd ai-assistant-cli
+
+- git clone [(https://github.com/Kashish-2005/AI-Assistant-Command-Generator-CLI)]
+- cd ai-assistant-cli
 
 **2. Install Dependencies**
     - pip install requests
