@@ -70,7 +70,7 @@ A powerful solution for managing complex and reusable terminal commands.
 
 **1. Clone the Repository**
     - git clone [[(https://github.com/Kashish-2005/AI-Assistant-Command-Generator-CLI)]
-     cd ai-assistant-cli
+    - cd ai-assistant-cli
 
 **2. Install Dependencies**
     - pip install requests
@@ -91,5 +91,5 @@ A powerful solution for managing complex and reusable terminal commands.
 - Once the API key is configured, launch the assistant via:
 - python ai_assistant_cli.py
 
-- you'll be presented with an interactive menu to access all seven core features!
+-- you'll be presented with an interactive menu to access all seven core features!
   ---
