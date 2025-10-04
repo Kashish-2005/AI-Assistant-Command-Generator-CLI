@@ -1,105 +1,95 @@
-🚀⭐ AI Assistant & Command Generator CLI ⭐🚀
-An interactive Command-Line Interface (CLI) assistant built with Python and the Google Gemini API. This project combines powerful AI analysis with a persistent local vault for your complex shell commands, making it a must-have developer utility.
+# 🚀⭐ The AI Assistant & Command Generator CLI ⭐🚀  
+### 🤖 A Developer's Essential Tool
 
-It's an ideal project for showcasing API integration, secure environment variable usage, and local file persistence (JSON).
+This is an interactive **Command-Line Interface (CLI)** assistant built with **Python** and the **Google Gemini API**. It’s designed to **boost developer productivity** by combining powerful AI features with a **secure, persistent vault** for your most complex shell commands.
 
-✨ Key Features Overview
-The CLI organizes its utility into two core, high-impact sections: AI Analysis and the Command Vault.
+---
 
-🧠 1. AI Analysis Tools (Powered by Gemini)
-Menu Option
+## 🔥 Features At a Glance
 
-Feature
+This project is ideal for demonstrating:
 
-Description
+- ✅ **API Integration** – Seamless, secure communication with a powerful AI model.
+- ✅ **Secure Configuration** – API key management using environment variables (no hardcoding!).
+- ✅ **Local Data Persistence** – Custom commands saved in a JSON-based local command vault.
 
-1
+---
 
-🗣️ General Q&A
+## ✨ Core Functionality Breakdown
 
-Ask any general knowledge question. Uses Google Search Grounding to ensure answers are based on up-to-date, verifiable information from the web.
+### 🧠 1. AI Analysis & Generation Tools
 
-2
+These features leverage Gemini AI for deep analysis, smart generation, and creative code help:
 
-💻 Explain Code Snippet
+#### 1. 🗣️ General Q&A (Web Search)
+- Ask anything!
+- Uses Google Search grounding for **factual accuracy** with citation sources.
 
-Paste any code (Python, JavaScript, etc.) and get a clean, detailed explanation of its purpose, logic, and outputs.
+#### 2. 💻 Explain Code Snippet
+- Paste any code (Python, JS, Shell, etc.)
+- Get a **plain-language breakdown** of its logic, inputs, and outputs.
 
-3
+#### 3. 💡 Code Generator
+- Describe a coding task (e.g., “Write a Python script for file hashing”)
+- The assistant returns **complete, runnable code** in Markdown format.
 
-💡 Code Generator
+#### 4. 📝 Summarize Local File
+- Provide a path to a local `.txt` file.
+- The assistant will return a **concise, bulleted summary**.
 
-Ask for a piece of code (e.g., "Python function for binary search") and the AI will generate and return the complete, runnable code block.
+---
 
-4
+### 📚 2. Command Vault (Productivity & Reusability)
 
-📝 Summarize Local File
+A powerful solution for managing complex and reusable terminal commands.
 
-Provide the path to any text file (notes, documentation, logs) and the AI will read it and return a concise, bulleted summary.
+#### 5. 🛠️ AI Generate New Command
+- Describe any terminal task in plain English.
+- The AI instantly returns an **accurate shell command** (e.g., `find`, `xargs`, etc.).
 
-📚 2. Command Vault (Productivity & Reusability)
-Menu Option
+#### 6. ➕ Add New Command Recipe
+- Manually save custom, complex commands (e.g., `ffmpeg`, `curl`, `rsync`).
+- Tag them with names and labels for quick retrieval.
 
-Feature
+#### 7. 🔍 Search & View Recipe
+- Search your command vault by name or tag.
+- Instantly retrieve and copy the **full command string**.
 
-Description
+---
 
-5
+## 🛠️ Setup & Installation
 
-🛠️ AI Generate New Command
+### ✅ Prerequisites
 
-Describe a complex task in plain English (e.g., "Find all files older than 30 days and zip them"). The AI instantly generates the exact shell command (find, xargs, etc.).
+- Python 3.x
+- Google Gemini API Key (Get one from [Google AI Studio](https://aistudio.google.com/app/apikey))
 
-6
+---
 
-➕ Add New Command Recipe
+### 📦 Installation Steps
 
-Manually save your own complex, hard-to-remember shell commands (e.g., long ffmpeg strings) with tags for easy future retrieval.
+**1. Clone the Repository**
+    - git clone [[(https://github.com/Kashish-2005/AI-Assistant-Command-Generator-CLI)]
+     cd ai-assistant-cli
 
-7
+**2. Install Dependencies**
+    - pip install requests
 
-🔍 Search & View Recipe
+### 🔒 API Key Configuration
 
-Search your local vault by name or tag. The tool displays the full command string, ready for you to copy and paste directly into your terminal.
+- Your Gemini API key should never be hardcoded. Use environment variables.
+## macOS / Linux (Bash/Zsh)
+- export GEMINI_API_KEY='YOUR_KEY_HERE'
 
-🛠️ Setup and Installation
-Prerequisites
-Python 3.x
+## Windows (PowerShell)
+- $env:GEMINI_API_KEY='YOUR_KEY_HERE'
 
-Gemini API Key: Get a key from Google AI Studio.
+---
 
-Installation Steps
-Clone the Repository:
+### ▶️ How to Run the Assistant
 
-git clone [https://github.com/YourUsername/ai-assistant-cli.git](https://github.com/YourUsername/ai-assistant-cli.git)
-cd ai-assistant-cli
+- Once the API key is configured, launch the assistant via:
+- python ai_assistant_cli.py
 
-Install Requirements:
-
-pip install requests
-
-🔒 API Key Configuration (CRITICAL STEP)
-For security and best practice, the application requires you to set the API key as an environment variable.
-
-DO NOT paste your API key directly into the Python file.
-
-Use the command appropriate for your system, replacing YOUR_KEY_HERE with your actual Gemini API key:
-
-Operating System
-
-Command
-
-macOS / Linux (Bash/Zsh)
-
-export GEMINI_API_KEY='YOUR_KEY_HERE'
-
-Windows (PowerShell)
-
-$env:GEMINI_API_KEY='YOUR_KEY_HERE'
-
-▶️ How to Run the Assistant
-After successfully setting your environment variable, run the application from your terminal:
-
-python ai_assistant_cli.py
-
-The interactive menu will immediately appear, allowing you to choose any of the available functions.
+- you'll be presented with an interactive menu to access all seven core features!
+  ---
