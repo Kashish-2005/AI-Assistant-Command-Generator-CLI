@@ -34,7 +34,7 @@ These features leverage Gemini AI for deep analysis, smart generation, and creat
 - The assistant returns **complete, runnable code** in Markdown format.
 
 #### 4. 📝 Summarize Local File
-- Provide a path to a local `.txt` file.
+- Provide a path to a local `.txt` or `.pdf` file.
 - The assistant will return a **concise, bulleted summary**.
 
 ---
@@ -54,6 +54,25 @@ A powerful solution for managing complex and reusable terminal commands.
 #### 7. 🔍 Search & View Recipe
 - Search your command vault by name or tag.
 - Instantly retrieve and copy the **full command string**.
+
+---
+
+## 📂 Supported File Types in the Canvas
+
+The `Summarize Local File` feature supports both modern and legacy file formats through smart, error-resistant file reading mechanisms.
+
+### 📄 1. Primary Support: PDF Documents
+- **File Extension**: `.pdf`
+- **Reading Mechanism**: Uses the `PyMuPDF` library (`fitz`) to open the file in binary mode (`fitz.open()`), extracting text **page-by-page**.
+- **Why This Matters**: Avoids `UnicodeDecodeError` by **not treating PDFs as plain text**, ensuring reliable PDF parsing and summarization.
+
+### 📃 2. Primary Support: Plain Text Files
+- **File Extensions**: `.txt`, `.log`, `.md`, `.csv`, `.py`, `.js`, `.html`, and other readable text/code files.
+- **Reading Mechanism**:
+  - **First Attempt**: Tries to read using `utf-8` encoding (modern and standard).
+  - **Fallback**: If `utf-8` fails (common with legacy files), uses `latin-1` encoding as a safe fallback.
+
+✅ This dual-approach ensures **maximum compatibility** with various file types without crashing or corrupting the output.
 
 ---
 
