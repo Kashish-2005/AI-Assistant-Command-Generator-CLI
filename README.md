@@ -1,115 +1,80 @@
-# 🚀⭐ The AI Assistant & Command Generator CLI ⭐🚀  
-### 🤖 A Developer's Essential Tool
+# 🚀 AI Assistant & Command Generator CLI  
+*A Powerful Developer Companion built with Python & Gemini API*
 
-This is an interactive **Command-Line Interface (CLI)** assistant built with **Python** and the **Google Gemini API**. It’s designed to **boost developer productivity** by combining powerful AI features with a **secure, persistent vault** for your most complex shell commands.
-
----
-
-## 🔥 Features At a Glance
-
-This project is ideal for demonstrating:
-
-- ✅ **API Integration** – Seamless, secure communication with a powerful AI model.
-- ✅ **Secure Configuration** – API key management using environment variables (no hardcoding!).
-- ✅ **Local Data Persistence** – Custom commands saved in a JSON-based local command vault.
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)  
+![Gemini](https://img.shields.io/badge/Gemini%20API-Enabled-blueviolet?logo=google)  
+![Hackathon Ready](https://img.shields.io/badge/Hackathon-Ready-green?style=flat-square)
 
 ---
 
-## ✨ Core Functionality Breakdown
+## ✨ Core Value Proposition
 
-### 🧠 1. AI Analysis & Generation Tools
+This CLI tool supercharges developer productivity by combining:
 
-These features leverage Gemini AI for deep analysis, smart generation, and creative code help:
+- 🧠 **AI-powered command & code generation**
+- 📂 **Local vault for storing and retrieving complex shell recipes**
+- 💻 **Code explanation, file summarization, and AI Q&A — right from the terminal**
 
-#### 1. 🗣️ General Q&A (Web Search)
-- Ask anything!
-- Uses Google Search grounding for **factual accuracy** with citation sources.
-
-#### 2. 💻 Explain Code Snippet
-- Paste any code (Python, JS, Shell, etc.)
-- Get a **plain-language breakdown** of its logic, inputs, and outputs.
-
-#### 3. 💡 Code Generator
-- Describe a coding task (e.g., “Write a Python script for file hashing”)
-- The assistant returns **complete, runnable code** in Markdown format.
-
-#### 4. 📝 Summarize Local File
-- Provide a path to a local `.txt` or `.pdf` file.
-- The assistant will return a **concise, bulleted summary**.
+It’s perfect for developers who want fast, intelligent assistance **without leaving the CLI**.
 
 ---
 
-### 📚 2. Command Vault (Productivity & Reusability)
+## ⚙️ Features & Options
 
-A powerful solution for managing complex and reusable terminal commands.
+### 🔍 AI Analysis & Generation
 
-#### 5. 🛠️ AI Generate New Command
-- Describe any terminal task in plain English.
-- The AI instantly returns an **accurate shell command** (e.g., `find`, `xargs`, etc.).
-
-#### 6. ➕ Add New Command Recipe
-- Manually save custom, complex commands (e.g., `ffmpeg`, `curl`, `rsync`).
-- Tag them with names and labels for quick retrieval.
-
-#### 7. 🔍 Search & View Recipe
-- Search your command vault by name or tag.
-- Instantly retrieve and copy the **full command string**.
+| Option | Description |
+|--------|-------------|
+| **1️⃣ General Q&A** | Ask any question. The AI fetches up-to-date, web-grounded answers. |
+| **2️⃣ Explain Code Snippet** | Paste a code block — the AI explains its logic, line by line. |
+| **3️⃣ Code Generator** | Describe the code you need (e.g., “Python quicksort script”), and get a runnable version. |
+| **4️⃣ Summarize Local File** | Analyze PDFs, docs, images, or zip archives and get bullet-point summaries. |
 
 ---
 
-## 📂 Supported File Types in the Canvas
+### 🛠 Command Recipe Vault
 
-The `Summarize Local File` feature supports both modern and legacy file formats through smart, error-resistant file reading mechanisms.
+A local vault to manage and understand your shell command history.
 
-### 📄 1. Primary Support: PDF Documents
-- **File Extension**: `.pdf`
-- **Reading Mechanism**: Uses the `PyMuPDF` library (`fitz`) to open the file in binary mode (`fitz.open()`), extracting text **page-by-page**.
-- **Why This Matters**: Avoids `UnicodeDecodeError` by **not treating PDFs as plain text**, ensuring reliable PDF parsing and summarization.
-
-### 📃 2. Primary Support: Plain Text Files
-- **File Extensions**: `.txt`, `.log`, `.md`, `.csv`, `.py`, `.js`, `.html`, and other readable text/code files.
-- **Reading Mechanism**:
-  - **First Attempt**: Tries to read using `utf-8` encoding (modern and standard).
-  - **Fallback**: If `utf-8` fails (common with legacy files), uses `latin-1` encoding as a safe fallback.
-
-✅ This dual-approach ensures **maximum compatibility** with various file types without crashing or corrupting the output.
+| Option | Description |
+|--------|-------------|
+| **5️⃣ Generate New Recipe (AI)** | Describe a task (e.g., “clean old Docker images”) — get the shell command instantly. |
+| **6️⃣ Add Known Recipe (Manual)** | Manually store your own complex commands with tags and descriptions. |
+| **7️⃣ Search & View Recipe** | Quickly look up saved commands by name or tag for reuse. |
+| **8️⃣ Explain Recipe (AI)** | Pick any saved command and let the AI explain it in plain English. |
 
 ---
 
-## 🛠️ Setup & Installation
+## 📦 Setup & Installation
 
-### ✅ Prerequisites
+### 🔧 Prerequisites
 
-- Python 3.x
-- Google Gemini API Key (Get one from [Google AI Studio](https://aistudio.google.com/app/apikey))
+- ✅ **Python**: Version 3.8 or higher  
+- 🔐 **Gemini API Key**: Get yours from [Google AI Studio](https://aistudio.google.com/app/apikey)
 
 ---
 
-### 📦 Installation Steps
+### 🔐 Environment Variable Setup
 
-**1. Clone the Repository**
+Before running the script, set the `GEMINI_API_KEY` in your environment.
 
-- git clone [(https://github.com/Kashish-2005/AI-Assistant-Command-Generator-CLI)]
-- cd ai-assistant-cli
+#### 💻 For macOS / Linux (Bash or Zsh):
 
-**2. Install Dependencies**
-    - pip install requests
-
-### 🔒 API Key Configuration
-
-- Your Gemini API key should never be hardcoded. Use environment variables.
-## macOS / Linux (Bash/Zsh)
 - export GEMINI_API_KEY='YOUR_KEY_HERE'
 
-## Windows (PowerShell)
+### Windows (PowerShell)
 - $env:GEMINI_API_KEY='YOUR_KEY_HERE'
 
 ---
 
-### ▶️ How to Run the Assistant
+## 📥 Installation Steps
 
-- Once the API key is configured, launch the assistant via:
-- python ai_assistant_cli.py
+- Clone the repo (or download the files)
+- Install base dependencies:
+     - pip install requests
+- Run the CLI:
+     - python ai_assistant_cli.py
+-- ✅ Remaining dependencies (for file handling, etc.) will install automatically on first run.
 
 -- you'll be presented with an interactive menu to access all seven core features!
   ---
