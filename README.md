@@ -74,7 +74,8 @@ Before running the script, set the `GEMINI_API_KEY` in your environment.
      - pip install requests
 - Run the CLI:
      - python ai_assistant_cli.py
--- ✅ Remaining dependencies (for file handling, etc.) will install automatically on first run.
+       
+- ✅ Remaining dependencies (for file handling, etc.) will install automatically on first run.
 
--- you'll be presented with an interactive menu to access all seven core features!
+-- you'll be presented with an interactive menu to access all nine core features!
   ---
