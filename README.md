@@ -1,105 +1,121 @@
-⭐ The AI Assistant & Command Generator CLI 🚀
-A Developer's Essential Tool
+# ⭐ The AI Assistant & Command Generator CLI 🚀
+### A Developer's Essential Productivity Tool  
 
-This is an interactive Command-Line Interface (CLI) assistant built with Python and the Google Gemini API. It's designed to boost developer productivity by combining powerful AI features with a secure, persistent vault for your most complex shell commands.
+This is an interactive **Command-Line Interface (CLI)** assistant built with **Python** and the **Google Gemini API**.  
+It’s designed to **boost developer productivity** by providing instant AI assistance and a **secure, persistent vault** for your most complex shell commands.
 
-🔥 Features At a Glance
-This project is ideal for demonstrating:
+---
 
-✅ Advanced API Integration – Seamless, stable communication with a powerful AI model.
+## 🔥 Key Features at a Glance
 
-✅ Multimodal AI – Processing, understanding, and summarizing image content (like flowcharts or diagrams).
+| **Category**        | **Feature Highlights** |
+|----------------------|-------------------------|
+| **Secure Setup**     | API Key loaded securely via the `.env` file (never hardcoded). |
+| **AI Generation**    | Instant code snippets, command line recipes, and complex explanations from Gemini. |
+| **Multimodal Canvas**| Analyzes content from Images, PDFs, DOCX, and Archives for summarization. |
+| **Productivity Vault** | Persistent storage for your complex shell commands (recipes) that can be searched and copied instantly. |
+| **Export to Sheets** | (Optional) Export and manage your saved commands for external usage. |
 
-✅ Local Data Persistence – Custom commands saved in a JSON-based local command vault.
+---
 
-✨ Core Functionality Breakdown
-🧠 1. AI Analysis & Generation Tools
-These features leverage the powerful Gemini model for deep analysis, smart generation, and creative assistance, fully embracing the "vibe coding" philosophy:
+## ✨ Core Functionality Breakdown
 
-🗣️ General Q&A (Web Search)
+### 🧠 1. AI Analysis & Generation Tools  
+These features leverage the **Gemini model** for powerful developer assistance:
 
-Ask anything! Uses Google Search grounding for factual accuracy with citation sources.
+#### 🗣️ General Q&A (Web Search)
+- Uses **Google Search grounding** for factual accuracy with citation sources.  
 
-💻 Explain Code Snippet
+#### 💻 Explain Code Snippet  
+- Paste any code block (Python, Bash, etc.) and receive a **plain-language breakdown** of its logic.  
 
-Paste any code (Python, JS, Shell, etc.).
+#### 💡 Code Generator  
+- Describe a coding task (e.g., *“Write a Python script for file hashing”*).  
+- Receive the **complete, runnable code** in Markdown format.  
 
-Get a plain-language breakdown of its logic, inputs, and outputs.
+#### 📝 Summarize Local File  
+- Provides a summary of complex local files, including **images** (analyzing diagrams/screenshots) and **documents**.  
 
-💡 Code Generator
+---
 
-Describe a coding task (e.g., "Write a Python script for file hashing").
+### 📚 2. Command Vault (Recipe Management)
+A persistent solution for managing complex terminal commands in a local **JSON vault**.
 
-The assistant returns complete, runnable code in Markdown format.
+#### 🛠️ AI Generate New Command  
+- Describe a terminal task (e.g., *“delete all old docker images”*).  
+- The AI returns the **accurate, optimized shell command string**.  
 
-📝 Summarize Local File (Multi-Format Support)
+#### ➕ Add Known Command Recipe  
+- Manually save **custom, complex commands** and tag them for quick retrieval.  
 
-Provides Gemini's assistance to extract meaning from complex data sources.
+#### 🔍 Search & View Recipe  
+- Quickly search your vault by **name or tag** to retrieve and copy the full command.  
 
-📚 2. Command Vault (Productivity & Reusability)
-A persistent, powerful solution for managing complex and reusable terminal commands.
+---
 
-🛠️ AI Generate New Command
+## 🛠️ Setup & Installation
 
-Describe any terminal task in plain English.
+### ✅ Prerequisites
+- **Python 3.x**  
+- **Google Gemini API Key** (Get one from [Google AI Studio](https://makersuite.google.com/app/apikey))
 
-The AI instantly returns an accurate shell command (e.g., find, xargs, etc.).
+---
 
-➕ Add New Command Recipe
+### 📦 Installation Steps
 
-Manually save custom, complex commands (e.g., ffmpeg, curl, rsync).
-
-Tag them with names and labels for quick retrieval.
-
-🔍 Search & View Recipe
-
-Search your command vault by name or tag.
-
-Instantly retrieve and copy the full command string.
-
-🖼️ Supported File Types in the Canvas
-The Summarize Local File feature uses robust reading mechanisms and Gemini's Vision capabilities to process various file formats:
-
-Category	File Extensions	Gemini's Role / Developer Value
-Multimodal Vision	.jpg, .jpeg, .png, etc.	The assistant analyzes images, extracts text from diagrams or screenshots, and describes the visual content—essential for understanding flowcharts or code snippets saved as pictures.
-Primary Documents	.pdf, .docx, .xlsx, .pptx	Extracts text from dense, structured documents for concise summarization.
-Code & Archives	.zip, .tar, .py, .md	Analyzes archive structure and file listings to infer project purpose without unpacking.
-
-Export to Sheets
-🛠️ Setup & Installation
-✅ Prerequisites
-Python 3.x
-
-Google Gemini API Key (Get one from Google AI Studio)
-
-📦 Installation Steps
-Clone the Repository
-
-Bash
-
-git clone [(https://github.com/Kashish-2005/AI-Assistant-Command-Generator-CLI)]
+#### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Kashish-2005/AI-Assistant-Command-Generator-CLI
 cd AI-Assistant-Command-Generator-CLI
-Install Dependencies
-(The script attempts to install these automatically, but running this ensures all are present:)
 
-Bash
+2️⃣ Install Dependencies
 
-pip install PyMuPDF python-docx openpyxl python-pptx Pillow requests
-🔒 API Key Configuration
-Your Gemini API key should never be hardcoded or committed to GitHub.
+You must install the primary libraries, including the python-dotenv library for secure key management:
 
-Set the GEMINI_API_KEY environment variable:
+pip install python-dotenv PyMuPDF python-docx openpyxl python-pptx Pillow requests
 
-Operating System	Command
-macOS / Linux	export GEMINI_API_KEY='YOUR_KEY_HERE'
-Windows (CMD)	set GEMINI_API_KEY='YOUR_KEY_HERE'
-Windows (PowerShell)	$env:GEMINI_API_KEY='YOUR_KEY_HERE'
+🔒 API Key Configuration (The Secure Method)
 
-Export to Sheets
+Your Gemini API key is loaded from the environment variable GEMINI_API_KEY.
+
+Create a file named .env in the root directory of your project.
+
+Add your Gemini API key inside this file in the following format:
+
+# .env file content
+GEMINI_API_KEY='YOUR_KEY_HERE'
+
+
+✅ The Python script automatically loads this file when it starts — your API key stays safe and unexposed.
+
 ▶️ How to Run the Assistant
-Once the dependencies and API key are configured, launch the assistant:
 
-Bash
+Launch the application from your terminal:
 
-python ai_assistant_cli.py
-You'll be presented with an interactive menu to access all core features!
+python cli.py
+
+
+Or, if you installed the package via:
+
+pip install -e .
+
+
+You can use the shortcut:
+
+ai-cli
+
+💬 Contributing
+
+Feel free to fork this repository, open issues, and submit pull requests to improve the CLI or extend its AI features.
+
+📜 License
+
+This project is licensed under the MIT License — you’re free to use, modify, and distribute it with attribution.
+
+🧑‍💻 Developed By
+
+Kashish
+Ruchira
+
+
+
