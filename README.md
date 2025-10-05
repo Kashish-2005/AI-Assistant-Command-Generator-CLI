@@ -60,3 +60,5 @@ Run the command corresponding to your operating system **before** running the Py
 
 ---
 
+### Gemini api is used in this 
+
